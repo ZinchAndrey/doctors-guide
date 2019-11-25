@@ -29,16 +29,17 @@ body {
   font-family: 'Open Sans', sans-serif;
   font-size: 16px;
   line-height: 22px;
-  width: 360px;
+  min-width: 360px;
+  max-width: 400px;
 }
 @media (min-width: 768px) {
   body {
-    width: 768px;
+    max-width: 800px;
   }
 }
 @media (min-width: 1920px) {
   body {
-    width: 1920px;
+    max-width: 1920px;
   }
 }
 a {
@@ -155,8 +156,8 @@ ul {
 }
 .page-main::before {
   content: '';
-  width: 100%;
-  height: 742px;
+  width: 400px;
+  height: 760px;
   position: absolute;
   background: url('../img/background mobile.svg'), url('../img/background mobile-2.svg');
   background-repeat: no-repeat;
@@ -166,12 +167,14 @@ ul {
 }
 @media (min-width: 768px) {
   .page-main::before {
+    width: 100%;
     background: url('../img/background tablet.svg'), url('../img/background tablet-2.svg');
     background-repeat: no-repeat;
   }
 }
 @media (min-width: 1920px) {
   .page-main::before {
+    width: 1920px;
     background: url('../img/background desktop.svg'), url('../img/background desktop-2.svg');
     background-repeat: no-repeat;
     height: 915px;
@@ -199,6 +202,7 @@ ul {
   font-size: 14px;
   line-height: 19px;
   margin-bottom: 25px;
+  width: 65%;
 }
 .promo__advantages-item {
   min-height: 45px;
@@ -520,6 +524,10 @@ ul {
 .abilities__item--camera {
   background: url('../img/camera-icon.svg');
   background-repeat: no-repeat;
+  display: block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  width: 288px;
 }
 .abilities__item--camera::after {
   content: "Скоро";
@@ -664,7 +672,7 @@ ul {
   }
   .control__list {
     font-size: 16px;
-    height: 110px;
+    height: 115px;
     display: -ms-flex;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -756,6 +764,7 @@ ul {
 }
 .slider__phone-mask {
   display: block;
+  width: 121px;
   position: relative;
   left: 50%;
   -webkit-transform: translateX(-50%);
@@ -813,7 +822,7 @@ ul {
             transform: translate(-50%, -50%);
   }
   .slider__screens {
-    width: 100%;
+    width: 570px;
     top: 53px;
   }
   .slider__phone-mask {
@@ -829,6 +838,9 @@ ul {
     width: 809px;
     height: 727px;
     margin-top: -320px;
+  }
+  .slider__screens {
+    width: 809px;
   }
   .slider__phone-mask {
     width: 342px;

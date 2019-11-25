@@ -27,11 +27,11 @@
     <h1 class="visually-hidden">Справочник врача</h1>
     <section class="promo">
       <h2 class="promo__header">Все данные о вашем здоровье в одном приложении</h2>
-      <p class="promo__description">Универсальная электронная медицинская карта и сервис для дистанционного сопровождения пациентов, которая решает следующие проблемы:</p>
+      <p class="promo__description">Универсальная электронная медицинская карта и сервис для дистанционного сопровождения пациентов, которая решает следующие&nbsp;проблемы:</p>
 
       <div class="promo__wrapper">
         <ul class="promo__advantages">
-          <li class="promo__advantages-item promo__advantages-item--mobile">Все необходимое в одном месте</li>
+          <li class="promo__advantages-item promo__advantages-item--mobile">Все необходимое в&nbsp;одном&nbsp;месте</li>
           <li class="promo__advantages-item promo__advantages-item--stat">Разработано врачами</li>
           <li class="promo__advantages-item promo__advantages-item--security">Безопасность данных</li>
           <li class="promo__advantages-item promo__advantages-item--ruble">Бесплатное приложение</li>
@@ -88,9 +88,19 @@
               <img src="img/arrow-right.svg" alt="Стрелка вправо">
             </button>
           </div>
-          <img class="slider__screens" src="img/slider-screens.png" alt="">
+          <picture>
+            <source media="(min-width: 1920px)" srcset="img/slider-screens-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/slider-screens-tablet.png">
+            <img class="slider__screens" src="img/slider-screens-mobile.png" alt="Скриншоты экранов">
+          </picture>
+          <!-- <img class="slider__screens" src="img/slider-screens.png" alt="Скриншоты экранов"> -->
           <img class="slider__phone-mask" src="img/android-phone-mask.png" alt="Телефон">
-          <img class="slider__screen-main" src="img/slider-main.png" alt="Центральный слайд">
+          <picture>
+            <source media="(min-width: 1920px)" srcset="img/slider-main-desktop.png">
+            <source media="(min-width: 768px)" srcset="img/slider-main-tablet.png">
+            <img class="slider__screen-main" src="img/slider-main-mobile.png" alt="Центральный слайд">
+          </picture>
+
         </div>
       </div>
 
