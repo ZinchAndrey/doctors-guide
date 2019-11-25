@@ -1,0 +1,122 @@
+.slider {
+  position: relative;
+  // margin-bottom: 64px;
+
+  &__buttons-block {
+    display: none;
+  }
+
+  &__screens {
+    width: 290px;
+    // text-align: center;
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: 26px;
+    z-index: 0;
+  }
+
+  &__phone-mask {
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 1;
+  }
+
+  &__screen-main {
+    width: 115px;
+    position: absolute;
+    display: block;
+    z-index: 2;
+    top: 12px;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+@media (min-width: @tablet-width)  {
+  .slider {
+    // margin-bottom: 100px;
+
+    &__buttons-block {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+      width: 383px;
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      z-index: 2;
+    }
+
+    &__button {
+      width: 48px;
+      height: 48px;
+      border: none;
+      border-radius: 50%;
+      background-color: @orange;
+      position: relative;
+      box-shadow: 5px 5px 30px 0px rgba(255,82,82,0.5);
+      cursor: pointer;
+
+      &:hover {
+        background-color: darken(@orange, 5%);
+        box-shadow: 7px 7px 40px 0px rgba(255,82,82,0.5);
+      }
+
+      img {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+      }
+    }
+
+    &__screens {
+      width: 100%;
+      top: 53px;
+    }
+
+    &__phone-mask {
+      width: 240px;
+    }
+
+    &__screen-main {
+      width: 227px;
+      top: 26px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .slider {
+    width: 809px;
+    height: 727px;
+    margin-top: -320px;
+
+    &__phone-mask {
+      width: 342px;
+    }
+
+    &__screen-main {
+      width: 323px;
+      // top: 26px;
+    }
+
+    &__buttons-block {
+      width: 664px;
+    }
+
+    &__button {
+      width: 82px;
+      height: 82px;
+
+      img {
+        height: 32px;
+      }
+    }
+  }
+}

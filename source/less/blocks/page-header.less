@@ -1,0 +1,104 @@
+.page-header {
+  .mobile-container();
+  padding-top: 25px;
+
+  &__wrapper {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__social-block {
+    display: none;
+  }
+
+  &__menu {
+    display: none;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-header {
+    background-color: @orange-header;
+    .tablet-container();
+    padding-top: 7px;
+    padding-bottom: 6px;
+
+    &__logo-health {
+      width: 97px;
+      height: 37px;
+    }
+
+    &__social-block {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    &__social-logo {
+      display: block;
+      width: 87px;
+      height: 25px;
+      padding: 2px;
+    }
+
+    &__link-block {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      align-items: center;
+    }
+
+    &__logo {
+      width: 120px;
+      height: 37px;
+      margin-left: 23px;
+    }
+
+    &__menu {
+      display: block;
+      margin-left: 20px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-header {
+    .desktop-container-header();
+    padding-top: 17px;
+    padding-bottom: 17px;
+
+    &__logo-health {
+      width: 173px;
+      height: 66px;
+    }
+
+    &__social-block {
+      width: 318px;
+    }
+
+    &__social-logo {
+      box-sizing: border-box;
+      &--android {
+        width: 160px;
+        height: 44px;
+      }
+
+      &--ios {
+        width: 130px;
+        height: 44px;
+      }
+    }
+
+    &__logo {
+      width: 190px;
+      height: auto;
+      margin-left: 59px;
+    }
+
+    &__menu {
+      display: none;
+    }
+  }
+}

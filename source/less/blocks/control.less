@@ -1,0 +1,144 @@
+.control {
+  .mobile-container();
+  margin-bottom: 64px;
+
+  &__header {
+    font-size: 22px;
+    line-height: 30px;
+    color: @orange-list;
+    font-weight: 400;
+    margin-bottom: 20px;
+  }
+
+  &__list {
+    color: @grey;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 32px;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 230px;
+      height: 180px;
+      position: absolute;
+      bottom: -130px;
+      left: -120px;
+      background: url('../img/background-spot-mobile-right.svg'),
+                  url('../img/background-spot-mobile-right-2.svg');
+      background-repeat: no-repeat;
+      transform: rotate(140deg);
+    }
+  }
+
+  &__item {
+    padding-left: 15px;
+    margin-bottom: 3px;
+    position: relative;
+
+    &::before {
+      content: '';
+      width: 5px;
+      height: 5px;
+      box-sizing: border-box;
+      border: 1px solid @orange-list;
+      position: absolute;
+      border-radius: 50%;
+      background: @orange-list;
+      left: 0;
+      top: 50%;
+      transform: translateY(-50%);
+
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .control {
+    .tablet-container();
+    margin-bottom: 100px;
+
+    &__header {
+      font-size: 28px;
+      display: block;
+      width: 440px;
+      line-height: 38px;
+    }
+
+    &__list {
+      font-size: 16px;
+      height: 110px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      align-content: space-between;
+      margin-bottom: 30px;
+
+      &::after {
+        content: none;
+      }
+    }
+
+    &__item {
+      margin-bottom: 5px;
+      padding-top: 2px;
+      padding-bottom: 2px;
+      width: 250px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .control {
+    .desktop-container();
+    margin-bottom: 100px;
+
+    &__header {
+      font-size: 46px;
+      line-height: 63px;
+      position: relative;
+
+      &::before {
+        content:'';
+        width: 395px;
+        height: 395px;
+        position: absolute;
+        left: -267px;
+        top: -221px;
+        border: 10px solid @grey-footer-text;
+        border-radius: 50%;
+        background: url('../img/pill-background.svg') center;
+        opacity: 0.15;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        background-clip: content-box;
+      }
+    }
+
+    &__list {
+      font-size: 18px;
+      line-height: 32px;
+      height: auto;
+      width: 470px;
+    }
+
+    &__item {
+      width: auto;
+      padding-left: 27px;
+
+      &::before {
+        width: 7px;
+        height: 7px;
+      }
+    }
+
+    &__wrapper {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}

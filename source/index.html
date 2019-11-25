@@ -1,12 +1,104 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="кг">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
+  <title>Справочник врача</title>
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
+  <header class="page-header">
+    <div class="page-header__wrapper">
+      <img class="page-header__logo-health" src="img/My-Health_rus.svg" alt="Мое здоровье">
+      <div class="page-header__link-block">
+        <div class="page-header__social-block">
+          <a href="#"><img class="page-header__social-logo page-header__social-logo--android" src="img/Play Store.svg" alt="Play Store"></a>
+          <a href="#"><img class="page-header__social-logo page-header__social-logo--ios" src="img/App Store.svg" alt="App Store"></a>
+        </div>
+        <img class="page-header__logo" src="img/лого.svg" alt="Логотип">
+        <img class="page-header__menu" src="img/menu-icon.svg" alt="Иконка меню">
+      </div>
+    </div>
+  </header>
+  <main class="page-main">
+    <h1 class="visually-hidden">Справочник врача</h1>
+    <section class="promo">
+      <h2 class="promo__header">Все данные о вашем здоровье в одном приложении</h2>
+      <p class="promo__description">Универсальная электронная медицинская карта и сервис для дистанционного сопровождения пациентов, которая решает следующие проблемы:</p>
 
+      <div class="promo__wrapper">
+        <ul class="promo__advantages">
+          <li class="promo__advantages-item promo__advantages-item--mobile">Все необходимое в одном месте</li>
+          <li class="promo__advantages-item promo__advantages-item--stat">Разработано врачами</li>
+          <li class="promo__advantages-item promo__advantages-item--security">Безопасность данных</li>
+          <li class="promo__advantages-item promo__advantages-item--ruble">Бесплатное приложение</li>
+        </ul>
+        <div class="promo__social">
+          <a href="#"><img src="img/App Store.svg" alt="App Store"></a>
+          <a href="#"><img src="img/Play Store.svg" alt="Play Store"></a>
+        </div>
+        <div class="promo__preview-block preview-block">
+          <div class="preview-block__ios">
+            <img src="img/iOS preview.png" alt="iOS Preview">
+          </div>
+          <div class="preview-block__android">
+            <img src="img/Android preview.png" alt="Android Preview">
+          </div>
+          <div class="preview-block__name-block">
+            <span class="preview-block__name ">iOS</span>
+            <span class="preview-block__name preview-block__name--active">Android</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="abilities">
+      <h2 class="abilities__header">Возможности приложения</h2>
+      <ul class="abilities__list">
+        <li class="abilities__item abilities__item--health">Контроль показателей своего здоровья</li>
+        <li class="abilities__item abilities__item--drugs">Создание курсов приема&nbsp;лекарств</li>
+        <li class="abilities__item abilities__item--documents">Храниние медицинских документов</li>
+        <li class="abilities__item abilities__item--bell">Создание <br>напоминаний</li>
+        <li class="abilities__item abilities__item--drop">Календарь менструального цикла</li>
+        <li class="abilities__item abilities__item--pregnant">Дневник течения беременности</li>
+        <li class="abilities__item abilities__item--news">Актуальные <br>новости</li>
+        <li class="abilities__item abilities__item--camera">Консультации врачей&nbsp;онлайн</li>
+      </ul>
+    </section>
+    <section class="control">
+      <h2 class="control__header">Контролируйте показатели своего здоровья</h2>
+      <div class="control__wrapper">
+        <ul class="control__list">
+          <li class="control__item">Вес</li>
+          <li class="control__item">Рост</li>
+          <li class="control__item">Температура</li>
+          <li class="control__item">Произвольные показатели</li>
+          <li class="control__item">Артериальное давление</li>
+          <li class="control__item">Сахар в крови</li>
+          <li class="control__item">Частота сердечных сокращений</li>
+        </ul>
+        <div class="control__slider slider">
+          <div class="slider__buttons-block">
+            <button class="slider__button slider__button--left">
+              <img src="img/arrow-left.svg" alt="Стрелка влево">
+            </button>
+            <button class="slider__button slider__button--right">
+              <img src="img/arrow-right.svg" alt="Стрелка вправо">
+            </button>
+          </div>
+          <img class="slider__screens" src="img/slider-screens.png" alt="">
+          <img class="slider__phone-mask" src="img/android-phone-mask.png" alt="Телефон">
+          <img class="slider__screen-main" src="img/slider-main.png" alt="Центральный слайд">
+        </div>
+      </div>
+
+    </section>
+  </main>
+  <footer class="main-footer">
+    <img src="img/logo-footer.svg" alt="Логотип МИР">
+    <p class="main-footer__text">EN / RU <br>Моё Здоровье <br>2016–2019 © ООО «МИР»</p>
+  </footer>
 </body>
 </html>

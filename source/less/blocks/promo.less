@@ -1,0 +1,169 @@
+.promo {
+  .mobile-container();
+  color: @white;
+  padding-top: 22px;
+
+  &__header {
+    margin: 0;
+    font-size: 22px;
+    line-height: 27px;
+    font-weight: 400;
+  }
+
+  &__description {
+    margin-top: 10px;
+    font-size: 16px;
+    line-height: 22px;
+    margin-bottom: 24px;
+  }
+
+  &__advantages {
+    padding-left: 80px;
+    font-size: 14px;
+    line-height: 19px;
+    margin-bottom: 25px;
+  }
+
+  &__advantages-item {
+    min-height: 45px;
+    line-height: 45px;
+    position: relative;
+    vertical-align: middle;
+    margin-bottom: 13px;
+
+    &--mobile {
+      line-height: 22px;
+    }
+
+    &--mobile::before {
+      background-image: url('../img/моб.svg');
+    }
+
+    &--stat::before {
+      background-image: url('../img/стетос.svg');
+    }
+
+    &--security::before {
+      background-image: url('../img/замок.svg');
+    }
+
+    &--ruble::before {
+      background-image: url('../img/руб.svg');
+    }
+  }
+
+  &__advantages-item::before {
+    content: '';
+    height: 45px;
+    width: 45px;
+    position: absolute;
+    left: -80px;
+  }
+
+  &__social {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 35px;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .promo {
+    .tablet-container();
+    padding-top: 30px;
+
+    &__header {
+      font-size: 24px;
+      line-height: 33px;
+    }
+
+    &__description {
+      line-height: 25px;
+      width: 80%;
+      margin-bottom: 30px;
+    }
+
+    &__advantages {
+      padding-left: 75px;
+      width: 30%;
+    }
+
+    &__advantages-item {
+      &::before {
+        left: -75px;
+      }
+    }
+
+    &__social {
+      display: none;
+    }
+
+    &__wrapper {
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .promo {
+    .desktop-container();
+    padding-top: 56px;
+
+    &__header {
+      font-size: 46px;
+      display: block;
+      width: 710px;
+      line-height: 60px;
+    }
+
+    &__description {
+      font-size: 20px;
+      line-height: 34px;
+      display: block;
+      width: 710px;
+      margin-top: 22px;
+      margin-bottom: 60px;
+    }
+
+    &__advantages {
+      padding-left: 128px;
+      font-size: 22px;
+      display: -webkit-flex;
+      display: -ms-flex;
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      align-content: space-between;
+      box-sizing: border-box;
+      height: 240px;
+      width: 730px;
+    }
+
+    &__advantages-item {
+      width: 215px;
+      align-items: center;
+      margin-bottom: 30px;
+      line-height: 30px;
+      padding: 15px 0;
+
+      &--mobile {
+        line-height: 30px;
+      }
+
+      &::before {
+        left: -128px;
+        top: 50%;
+        transform: translateY(-50%);
+        width: 90px;
+        height: 90px;
+        background-repeat: no-repeat;
+        background-size: 90px 90px;
+      }
+    }
+  }
+}

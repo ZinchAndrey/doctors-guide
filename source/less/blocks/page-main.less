@@ -1,0 +1,37 @@
+.page-main {
+  overflow: hidden;
+  &::before {
+    content: '';
+    width: 100%;
+    height: 742px;
+    position: absolute;
+    background: url('../img/background mobile.svg'), url('../img/background mobile-2.svg');
+    background-repeat: no-repeat;
+    background-position: top left;
+    // background-size: auto 742px;
+    z-index: -1;
+    top: 0;
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .page-main {
+    &::before {
+      // background-image: none;
+      background: url('../img/background tablet.svg'), url('../img/background tablet-2.svg');
+      background-repeat: no-repeat;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .page-main {
+    &::before {
+      // background-image: none;
+      background: url('../img/background desktop.svg'), url('../img/background desktop-2.svg');
+      background-repeat: no-repeat;
+      height: 915px;
+      // top: 100px;
+    }
+  }
+}

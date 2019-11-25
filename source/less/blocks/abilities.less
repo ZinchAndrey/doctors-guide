@@ -1,0 +1,164 @@
+.abilities {
+  .mobile-container();
+
+  &__header {
+    color: @orange;
+    font-size: 22px;
+    font-weight: 400;
+    text-align: left;
+  }
+
+  &__list {
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+
+    &::after {
+      content: '';
+      width: 230px;
+      height: 180px;
+      // border: 1px solid black;
+      position: absolute;
+      bottom: -50px;
+      right: -110px;
+      background: url('../img/background-spot-mobile-right-2.svg'),
+                  url('../img/background-spot-mobile-right.svg');
+      background-repeat: no-repeat;
+    }
+  }
+
+  &__item {
+    padding-left: 80px;
+    margin-bottom: 20px;
+    min-height: 45px;
+    position: relative;
+
+    &--health {
+      background: url('../img/health-icon.svg');
+      background-repeat: no-repeat;
+    }
+
+    &--drugs {
+      background: url('../img/drug-icon.svg');
+      background-repeat: no-repeat;
+    }
+
+    &--documents {
+      background: url('../img/floppy-icon.svg');
+      background-repeat: no-repeat;
+    }
+
+    &--bell {
+      background: url('../img/bell-icon.svg');
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+
+    &--drop {
+      background: url('../img/drop-icon.svg');
+      background-repeat: no-repeat;
+    }
+
+    &--pregnant {
+      background: url('../img/pregnant-icon.svg');
+      background-repeat: no-repeat;
+    }
+
+    &--news {
+      background: url('../img/news-icon.svg');
+      background-repeat: no-repeat;
+      vertical-align: middle;
+    }
+
+    &--camera {
+      background: url('../img/camera-icon.svg');
+      background-repeat: no-repeat;
+
+      &::after {
+        content: "Скоро";
+        padding: 1px 12px;
+        color: @white;
+        font-weight: bold;
+        background: linear-gradient(90deg, #F26A35 0%, #EE3048 100%);
+        border-radius: 15px;
+        position: absolute;
+        top: -15px;
+        right: 15px;
+      }
+    }
+  }
+}
+
+@media (min-width: @tablet-width) {
+  .abilities {
+    .tablet-container();
+    margin-bottom: 60px;
+
+    &__header {
+      font-size: 28px;
+      margin-bottom: 30px;
+    }
+
+    &__list {
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 270px;
+      align-content: space-between;
+
+      &::after {
+        width: 461px;
+        height: 372px;
+        background-size: 461px 372px;
+        bottom: -400px;
+        right: -190px;
+      }
+    }
+
+    &__item {
+      padding-left: 65px;
+      box-sizing: border-box;
+      width: 270px;
+    }
+  }
+}
+
+@media (min-width: @desktop-width) {
+  .abilities {
+    .desktop-container();
+    margin-bottom: 240px;
+
+    &__header {
+      font-size: 46px;
+      line-height: 63px;
+      margin-bottom: 40px;
+    }
+
+    &__list {
+      width: 100%;
+      height: 210px;
+
+      &::after {
+        width: 1129px;
+        height: 910px;
+        background-size: 1129px 910px;
+        right: -1000px;
+        bottom: -700px;
+      }
+    }
+
+    &__item {
+      width: 24%;
+      font-size: 18px;
+      line-height: 25px;
+      padding: 6px 0 6px 90px;
+      margin-bottom: 40px;
+      background-size: 61px;
+
+      &--camera::after {
+        right: 40px;
+      }
+    }
+  }
+}
